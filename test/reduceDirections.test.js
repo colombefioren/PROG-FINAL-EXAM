@@ -43,4 +43,7 @@ describe("Reduce to the shortest possible way", () => {
       ])
     ).to.deep.eq(["NORD", "EST", "SUD", "SUD", "NORD", "OUEST", "SUD"]);
   });
+  it("should return []", () => {
+    expect(reduceDirections([])).to.deep.eq([]);
+  });
 });
