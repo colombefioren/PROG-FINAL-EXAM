@@ -1,4 +1,4 @@
-const getLastDelegation = (delegations) => {
+export const getLastDelegation = (delegations) => {
   let delegationInfo = [];
   for (const delegation of delegations) {
     const [name, distanceToTarget, velocity] = delegation.split(" ");
