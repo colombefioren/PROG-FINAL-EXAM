@@ -1,4 +1,3 @@
-
 export const reduceDirections = (directions) => {
     let opp = {
         "NORD" : "SUD",
@@ -7,19 +6,11 @@ export const reduceDirections = (directions) => {
         "OUEST": "EST"
     }
     let res = [];
-    for (let i = 0; i < directions.length - 1; i++) {  
-
-        if (res[res.length - 1] == directions[i]) {
-            res.pop(res[res.length - 1])
+    for (let i = 0; i < directions.length; i++) {  
+        if (res[res.length - 1] == opp[directions[i]]) {
+            res.pop();
         } else {
             res.push(directions[i]);
-        }
-        if ((res[res.length - 1] == opp[directions[i + 1]])) {
-            res.pop();
-            i++;
-            continue;
-        } else {
-            res.push(directions[i + 1]);
         }
     }
     return res;
