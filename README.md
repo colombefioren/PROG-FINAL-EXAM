@@ -1,4 +1,4 @@
-<div style="display:flex; justify-content:center; margin-bottom:16px"><img src="https://i.ibb.co/wZ6CHwRn/Chat-GPT-Image-9-mai-2025-12-47-53.png" style="width:100px; border-radius:50%;"></div>
+<div align='center'><img src="https://i.ibb.co/wZ6CHwRn/Chat-GPT-Image-9-mai-2025-12-47-53.png" style="width:100px; border-radius:50%;"></div>
 <h1 align="center">📘 Examen Final – PROG1</h1>
 
 <p align="center">
