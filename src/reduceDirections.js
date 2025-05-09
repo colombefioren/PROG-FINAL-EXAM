@@ -1,86 +1,40 @@
-const card = ["NORD", "SUD", "SUD", "EST", "OUEST", "NORD", "OUEST"];
-const reduceDirection = (directions) => {
-  //   let k = 0;
+
+export function removeContrary(directions) {
   let temp = directions.map((e) => e);
   let n =
     directions.length % 2 === 0 ? directions.length : directions.length - 1;
-  // for (let i = 0; i < n; i += 2) {
-  //     restTemp.push([]);
-  //     restTemp[k].push(directions[i], directions[i + 1]);
-  //     k++;
-  //   }
-  //   if ((n = directions.length - 1)) {
-  //     restTemp.push(directions[directions.length - 1]);
-  //   }
-  //   return restTemp;
-
   for (let i = 0; i < n; i++) {
     if (checkIfContrary(directions[i], directions[i + 1])) {
       temp[i] = 0;
       temp[i + 1] = 0;
-    }
-  }
-  return temp;
-};
-
-function removeContrary(card) {
-  let temp = directions.map((e) => e);
-  let n =
-    directions.length % 2 === 0 ? directions.length : directions.length - 1;
-  // for (let i = 0; i < n; i += 2) {
-  //     restTemp.push([]);
-  //     restTemp[k].push(directions[i], directions[i + 1]);
-  //     k++;
-  //   }
-  //   if ((n = directions.length - 1)) {
-  //     restTemp.push(directions[directions.length - 1]);
-  //   }
-  //   return restTemp;
-
-  for (let i = 0; i < n; i++) {
-    if (checkIfContrary(directions[i], directions[i + 1])) {
-      temp[i] = 0;
-      temp[i + 1] = 0;
+      i++;
     }
   }
   return temp;
 }
 
-function newArray(array) {
-  let array = [];
+export function checkSameArray(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] === array2[i]) {
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+export function newArray(array) {
+  let ourArray = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i] != 0) {
-      array.push(array[i]);
+      ourArray.push(array[i]);
     }
   }
-  return array;
+  return ourArray;
 }
 
-const direction = (restTemp) => {
-  for (let i = 0; i < restTemp.length; i++) {
-    if (checkIfContrary(restTemp[i][0], restTemp[i][1])) {
-      restTemp.shift();
-    }
-  }
-};
-
-function check(directions) {
-  let restTemp = [];
-  let temp1 = directions.map((e) => e);
-  let temp = directions.map((e) => e);
-  for (let i = 0; i < directions.length; i++) {
-    if (checkIfContrary(directions[i], directions[i + 1])) {
-      restTemp.push(temp.slice(i + 2));
-      temp = directions.map((e) => e);
-    }
-  }
-
-  return [restTemp[0][0], ...restTemp[restTemp.length - 1]];
-}
-
-console.log(reduceDirection(card));
-
-function checkIfContrary(dir1, dir2) {
+export function checkIfContrary(dir1, dir2) {
   if (dir1 === "NORD") {
     if (dir2 === "SUD") {
       return true;
@@ -110,3 +64,20 @@ function checkIfContrary(dir1, dir2) {
     }
   }
 }
+
+export function reduceDirections(card) {
+  let remove = removeContrary(card);
+  let result = newArray(remove);
+  let loop = true;
+  let before;
+  while (loop) {
+    before = result.map((e) => e);
+    remove = removeContrary(result);
+    result = newArray(remove);
+    if (checkSameArray(before, result)) {
+      loop = false;
+    }
+  }
+  return result;
+}
+
