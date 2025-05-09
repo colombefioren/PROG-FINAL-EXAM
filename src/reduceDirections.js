@@ -15,18 +15,5 @@ export const reduceDirections = (directions) => {
     }
     return res;
 }
-console.log(reduceDirections(["NORD",
-        "NORD",
-        "SUD",
-        "OUEST",
-        "EST",
-        "EST",
-        "SUD",
-        "NORD",
-        "SUD",
-        "OUEST",
-        "NORD",
-        "SUD",
-        "OUEST"]));
 
 export default reduceDirections;
