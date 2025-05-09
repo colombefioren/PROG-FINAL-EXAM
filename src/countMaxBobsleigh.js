@@ -11,7 +11,7 @@ const map = [
   "X...XXXXX.",
 ];
 
-const countMaxBobsleigh = (N, map) => {
+export const countMaxBobsleigh = (N, map) => {
   let nbrBobsleigh = 0;
   let cpt = 0;
   for (let i = 0; i < N; i++) {
