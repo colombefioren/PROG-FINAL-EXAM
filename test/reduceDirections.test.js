@@ -19,12 +19,12 @@ describe("Reduce to the shortest possible way", () => {
       "OUEST",
     ]);
   });
-  it("should return ['NORD','OUEST]", () => {
+  it("should return ['NORD','OUEST','OUEST']", () => {
     expect(
-      reduceDirections(["NORD", "EST", "SUD", "OUEST", "OUEST"])
-    ).to.deep.eq(["NORD", "OUEST"]);
+      reduceDirections(["NORD", "EST", "OUEST", "OUEST", "OUEST"])
+    ).to.deep.eq(["NORD", "OUEST", "OUEST"]);
   });
-  it("should return ['NORD','EST','SUD','SUD','NORD','OUEST,'SUD']", () => {
+  it("should return ['NORD', 'EST', 'SUD', 'OUEST', 'OUEST']", () => {
     expect(
       reduceDirections([
         "NORD",
@@ -41,9 +41,10 @@ describe("Reduce to the shortest possible way", () => {
         "SUD",
         "OUEST",
       ])
-    ).to.deep.eq(["NORD", "EST", "SUD", "SUD", "NORD", "OUEST", "SUD"]);
+    ).to.deep.eq(["NORD", "EST", "SUD", "OUEST", "OUEST"]);
   });
   it("should return []", () => {
     expect(reduceDirections([])).to.deep.eq([]);
-  });
+  })
+  it("should return []");
 });
