@@ -45,6 +45,5 @@ describe("Reduce to the shortest possible way", () => {
   });
   it("should return []", () => {
     expect(reduceDirections([])).to.deep.eq([]);
-  })
-  it("should return []");
+  });
 });
