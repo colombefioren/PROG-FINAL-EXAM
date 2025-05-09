@@ -1,16 +1,3 @@
-const map = [
-  "....X....",
-  "X.........",
-  "XXX...XXX.",
-  ".......X..",
-  "X...XXXXX.",
-  "....X....",
-  "X.........",
-  "XXX...XXX.",
-  ".......X..",
-  "X...XXXXX.",
-];
-
 export const countMaxBobsleigh = (N, map) => {
   let nbrBobsleigh = 0;
   let cpt = 0;
@@ -32,4 +19,3 @@ export const countMaxBobsleigh = (N, map) => {
   return nbrBobsleigh;
 };
 
-console.log(countMaxBobsleigh(10, map));
