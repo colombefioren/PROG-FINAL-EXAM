@@ -28,4 +28,24 @@ describe("Get the last delegation", () => {
       ])
     ).to.eq("Egypt");
   });
+  it("should return Greece", () => {
+    expect(
+      getLastDelegation([
+        "Uruguay 80 4",
+        "USA 100 8",
+        "Greece 200 2",
+        "Tanzania 70 5",
+      ])
+    ).to.eq("Greece");
+  });
+  it("should return Zambia", () => {
+    expect(
+      getLastDelegation([
+        "Russia 103 5",
+        "Moldavia 39 9",
+        "Austria 420 69",
+        "Zambia 80 2",
+      ])
+    ).to.eq("Zambia");
+  });
 });
