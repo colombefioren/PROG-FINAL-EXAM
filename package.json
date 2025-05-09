@@ -1,0 +1,25 @@
+{
+  "name": "prog-final-exam",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">📘 Examen Final – PROG1</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colombefioren/PROG-FINAL-EXAM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/colombefioren/PROG-FINAL-EXAM/issues"
+  },
+  "homepage": "https://github.com/colombefioren/PROG-FINAL-EXAM#readme",
+  "dependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.2.2"
+  }
+}
