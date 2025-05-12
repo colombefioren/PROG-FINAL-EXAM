@@ -6,7 +6,7 @@
   développées dans le cadre de l’examen final de  PROG1.
 </p>
 <p align="center">
-  Lancer la commande <span style="background-color: #333; color: #fff; padding: 2px 4px; border-radius: 4px">npm run test</span> pour lancer tous les tests.
+  Lancer la commande <span style="background-color: #444; color: #fff; padding: 2px 4px; border-radius: 4px">npm run test</span> pour lancer tous les tests.
 </p>
 <br>
 
