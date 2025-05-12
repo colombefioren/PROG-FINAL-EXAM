@@ -5,7 +5,9 @@
   Ce repo contient nos solutions algorithmiques<br>
   développées dans le cadre de l’examen final de  PROG1.
 </p>
-
+<p>
+  Lancer la commande <span style="background-color: #333; color: #fff; padding: 2px 4px; border-radius: 4px">npm run test</span> pour lancer tous les tests.
+</p>
 <br>
 
 ## 👥 Membres de l’équipe OnlyDevs
